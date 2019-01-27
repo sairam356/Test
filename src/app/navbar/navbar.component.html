@@ -9,7 +9,7 @@
     <a class="navbar-brand"  href="../home/index.html" style="color:white;">&nbsp;
       <!-- <img src="img/logo.png" style="width: 90px;"> -->Online Courses
     </a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-7" aria-controls="navbarSupportedContent-7" aria-expanded="false" aria-label="Toggle navigation">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse">
@@ -19,7 +19,7 @@
       </form>
       <ul class="navbar-nav ml-auto">
         <li class="nav-item" style="padding-left:20px;">
-          <a class="nav-link" href="#" style="color:white;">Courses</a>
+          <a class="nav-link" routerLink="/ListCourses" href="#" style="color:white;">Courses</a>
         </li>
         <li class="nav-item" style="padding-left:20px;">
           <a class="nav-link" href="#" style="color:white;">Project Support</a>
@@ -43,3 +43,4 @@
   <a href="" style="padding-left:17px;padding-right: 17px;color:black;text-decoration: none;padding-top:5px;padding-bottom: 5px;">Cloud Computing</a>
   <a href="" style="padding-left:17px;padding-right: 17px;color:black;text-decoration: none;padding-top:5px;padding-bottom: 5px;">Cloud Computing</a>
 </p>
+<router-outlet></router-outlet>

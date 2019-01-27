@@ -1,0 +1,56 @@
+@media (min-width: 1000px) {
+  #amazon{
+      width: 65%;height:65%;margin-top: -95px;margin-left:55px;
+  }
+  #machine{
+      width:29.5%; height:30%;margin-top:-109px;margin-left:110px;
+  }
+  #nodejs{
+      width: 40%;height:40%;margin-top: -92px;margin-left:105px;
+  }
+  #angular{
+      width: 30%;height:31%;margin-top: -112px;margin-left:120px;
+  }
+  #react{
+      width: 31%;height:30%;margin-top: -103px;margin-left:105px;
+  }
+  #java{
+      width: 27%;height:30%;margin-top: -101px;margin-left:125px;
+  }
+  .middle {
+    opacity: 0;
+    position: absolute;
+  }
+  .text {
+    padding-top:60px;
+    padding-left:20px;
+    padding-bottom:30px;
+    background-color:black;opacity:0.9;
+    color: white;
+    font-size: 16px;
+    width:100%;height:100%;
+  }
+  .card:hover .card-img-top .card-body{
+    opacity: 0.2;
+  }
+  .card:hover .middle {
+    width:100%;height:100%;
+    opacity: 1;
+  }
+  .card1{
+    box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.2);
+  }
+  #star{
+    font-size:20px;color:#f4bd37;padding-top: 5px;
+    font-size:20px;color:#f4bd37;padding-top: 5px;
+    font-size:20px;color:#f4bd37;padding-top: 5px;
+    font-size:20px;color:#f4bd37;padding-top: 5px;
+    font-size:20px;color:#f4bd37;padding-top: 5px;
+  }
+  #icons{
+    padding-right:10px;font-size: 12px;
+  }
+  #desktopCarouselbutton{
+    margin-left:1020px;padding-bottom: 30px;
+  }
+}
