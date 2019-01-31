@@ -11,6 +11,8 @@ import { ListCoursesComponent } from './list-courses/list-courses.component';
 import { HomeComponent } from './home/home.component';
 import { ThreecardcarouselComponent } from './threecardcarousel/threecardcarousel.component';
 import { SinglecoursepageComponent } from './singlecoursepage/singlecoursepage.component';
+import { ScrollspycontentComponent } from './scrollspycontent/scrollspycontent.component';
+import { ContactadsComponent } from './contactads/contactads.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,9 @@ import { SinglecoursepageComponent } from './singlecoursepage/singlecoursepage.c
     ListCoursesComponent,
     HomeComponent,
     ThreecardcarouselComponent,
-    SinglecoursepageComponent
+    SinglecoursepageComponent,
+    ScrollspycontentComponent,
+    ContactadsComponent
   ],
   imports: [
     BrowserModule,

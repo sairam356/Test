@@ -44,15 +44,21 @@
     opacity: 0.5;
     display: flex;
 }
-
-
-/* control image height */
 .card-img-top-250 {
     max-height: 250px;
     overflow:hidden;
 }
 @media (min-width: 1000px) {
   #desktopCarouselbutton{
-    margin-left:1020px;padding-bottom: 30px;
+    box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.2);
+    margin-left: -70px;
+    /* float:left; */
+    margin-bottom: -400px;
+  }
+  #desktopCarouselbutton1{
+    box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.2);
+    margin-left: 1200px;
+    /* float:right; */
+    margin-bottom: -400px;
   }
 }

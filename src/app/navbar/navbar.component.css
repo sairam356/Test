@@ -1,4 +1,5 @@
-p a:hover {
-    background-color: #fcfcfc;
-  }
-
+@media (min-width: 1000px) {
+  p a:hover {
+      background-color: #fcfcfc;
+    }
+}

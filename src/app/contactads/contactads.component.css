@@ -1,0 +1,14 @@
+@media (min-width: 1000px) {
+.card1{
+    box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.2);padding: 20px 20px 20px;
+}
+.phone{
+    font-size:40px;color:#0060af;float: left;margin-bottom: -15px;
+}
+.query{
+    margin-top: -25px;margin-left: 60px;
+}
+.number{
+    font-size:18px;color:#0060af;margin-top: -10px;margin-left: 60px;
+}
+}

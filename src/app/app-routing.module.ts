@@ -6,8 +6,8 @@ import {HomeComponent} from './home/home.component';
 import { SinglecoursepageComponent } from './singlecoursepage/singlecoursepage.component';
 
 const routes: Routes = [
-  {path: '',component:HomeComponent},
-  // {path: '',component:AppComponent},
+  {path: '' ,redirectTo: '/home', pathMatch: 'full'},
+  {path: 'home',component:HomeComponent},
   {path: 'ListCourses', component:ListCoursesComponent},
   {path: 'singleCourse', component:SinglecoursepageComponent},
 ];

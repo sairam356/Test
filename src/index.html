@@ -11,24 +11,48 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <style>
+    #myBtn {
+      display: none;
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 99;
+      font-size: 20px;
+      border: none;
+      outline: none;
+      background-color:lightblue;
+      cursor: pointer;
+      padding: 15px;
+      border-radius: 45%;
+    }
+</style>
+  </style>
 </head>
 <body>
+  <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fa fa-arrow-up"></i></button>
   <app-root></app-root>
 </body>
 <script>
   (function($) {
       "use strict";
-
-      // manual carousel controls
       $('.next').click(function(){ $('#postsCarousel').carousel('next');return false; });
       $('.prev').click(function(){ $('#postsCarousel').carousel('prev');return false; });
-      
+  })(jQuery);
+</script>
+
+<script>
+  (function($) {
+      "use strict";
+      $('#next').click(function(){ $('#postsCarousel1').carousel('next');return false; });
+      $('#prev').click(function(){ $('#postsCarousel1').carousel('prev');return false; });
   })(jQuery);
 </script>
 <script>
   $(document).ready(function() {
   var $menu = $(".nav__menu");
   var $menu_a = $("a", $menu);
+  console.log('-----',$menu_a);
   var id = false;
   var sections = [];
   var hash = function(h) {
@@ -38,7 +62,6 @@
       location.hash = h;
     }
   };
-
   $menu_a.click(function(event) {
     event.preventDefault();
     $("html, body").animate(
@@ -51,7 +74,6 @@
       }
     );
   });
-
   $menu_a.each(function() {
     sections.push($($(this).attr("href")));
   });
@@ -72,16 +94,19 @@
     }
   });
 });
-
 </script>
 <script>
-    (function($) {
-        "use strict";
-  
-        // manual carousel controls
-        $('#next').click(function(){ $('#postsCarousel1').carousel('next');return false; });
-        $('#prev').click(function(){ $('#postsCarousel1').carousel('prev');return false; });
-        
-    })(jQuery);
-  </script>
+    window.onscroll = function() {scrollFunction()};
+    function scrollFunction() {
+      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        document.getElementById("myBtn").style.display = "block";
+      } else {
+        document.getElementById("myBtn").style.display = "none";
+      }
+    }
+    function topFunction() {
+      document.body.scrollTop = 0;
+      document.documentElement.scrollTop = 0;
+    }
+    </script>
 </html>

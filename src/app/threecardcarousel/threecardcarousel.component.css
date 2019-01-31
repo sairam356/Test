@@ -50,7 +50,14 @@
   #icons{
     padding-right:10px;font-size: 12px;
   }
-  #desktopCarouselbutton{
-    margin-left:1020px;padding-bottom: 30px;
+  .desktopCarouselbutton{
+    box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.2);
+    margin-left: -50px;
+    margin-bottom: -420px;
+  }
+  .desktopCarouselbutton1{
+    box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.2);
+    margin-left: 1160px;
+    margin-bottom: -420px;
   }
 }
