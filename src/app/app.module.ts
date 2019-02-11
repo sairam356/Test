@@ -13,6 +13,8 @@ import { ThreecardcarouselComponent } from './threecardcarousel/threecardcarouse
 import { SinglecoursepageComponent } from './singlecoursepage/singlecoursepage.component';
 import { ScrollspycontentComponent } from './scrollspycontent/scrollspycontent.component';
 import { ContactadsComponent } from './contactads/contactads.component';
+import { TrainerregistrationComponent } from './trainerregistration/trainerregistration.component';
+import { StudentregistrationComponent } from './studentregistration/studentregistration.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +28,9 @@ import { ContactadsComponent } from './contactads/contactads.component';
     ThreecardcarouselComponent,
     SinglecoursepageComponent,
     ScrollspycontentComponent,
-    ContactadsComponent
+    ContactadsComponent,
+    TrainerregistrationComponent,
+    StudentregistrationComponent
   ],
   imports: [
     BrowserModule,
