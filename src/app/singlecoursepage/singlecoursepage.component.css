@@ -43,25 +43,25 @@
   }
   
   #section-1 {
-    max-height: 500px;
+    max-height: 450px;
     background-color: white;
     color: black;
     font-size: 14px;
-    padding: 60px 40px 40px;
+    padding: 50px 40px 40px;
   }
   #section-2 {
-    max-height: 1000px;
+    max-height: 950px;
     background-color: white;
     color: black;
     font-size: 14px;
-    padding: 60px 40px 40px;
+    padding: 50px 40px 40px;
   }
   #section-3 {
     max-height: 800px;
     background-color: white;
     color: black;
     font-size: 14px;
-    padding: 60px 40px 40px;
+    padding: 40px 40px 40px;
   }
   #section-4 {
     max-height: 700px;

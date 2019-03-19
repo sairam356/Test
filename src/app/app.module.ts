@@ -1,6 +1,6 @@
-import { BrowserModule } from '@angular/platform-browser';
+import { BrowserModule} from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import {AllcoursedetailsService} from './allcoursedetails.service';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
@@ -15,6 +15,7 @@ import { ScrollspycontentComponent } from './scrollspycontent/scrollspycontent.c
 import { ContactadsComponent } from './contactads/contactads.component';
 import { TrainerregistrationComponent } from './trainerregistration/trainerregistration.component';
 import { StudentregistrationComponent } from './studentregistration/studentregistration.component';
+import { DomSanitizerImpl } from '@angular/platform-browser/src/security/dom_sanitization_service';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,7 @@ import { StudentregistrationComponent } from './studentregistration/studentregis
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [AllcoursedetailsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -10,10 +10,9 @@ const routes: Routes = [
   {path: '' ,redirectTo: '/home', pathMatch: 'full'},
   {path: 'home',component:HomeComponent},
   {path: 'ListCourses', component:ListCoursesComponent},
-  {path: 'singleCourse', component:SinglecoursepageComponent},
+  {path: 'singleCourse/:courseName', component:SinglecoursepageComponent},
   {path: 'studentRegister', component:StudentregistrationComponent},
   {path: 'TrainerRegister', component:TrainerregistrationComponent},
-
 ];
 
 @NgModule({
