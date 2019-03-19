@@ -11,7 +11,7 @@ export class AllcoursedetailsService {
         {
           'MainHeadingCourse':'Java, J2EE & SOA Certification Training',
           'CourseDescription' :'Java Certification Training is curated by the professionals as per the industrial requirements & demands. Java Online Training encompasses comprehensive knowledge on basic and advanced concepts of core Java & Java EE along with popular frameworks like Hibernate, Spring, and SOA. In this course, you will gain expertise in the concepts like Java Array, Java OOPs, Java Function, Java Loops, Java Collections, Java Thread, Java Servlet, Java Design Patterns, and Web Services using industry use-cases.',
-          'VideoUrl':'https://www.youtube.com/watch?v=3u1fu6f8Hto',
+          'VideoUrl':'https://www.youtube-nocookie.com/embed/3u1fu6f8Hto',
           'onlineClassHeader':'Instructor-led Java, J2EE & SOA live online classes',
           'classInfo':[
              {
@@ -48,8 +48,6 @@ export class AllcoursedetailsService {
           'CourseCiruculumName':'Java, J2EE & SOA Course Curriculum',
           'CourseCurriculum':[{
             'headerName':'Introduction of Java',
-            'collapseId':'collapseOne',
-            'collapseHeaderId':'headingOne',
             'LearningObjectives':'In this module, you will learn about Java architecture, advantages of Java, develop the code with various data types, conditions, and loops.',
             'listofContent':[{
                   'content1':'Introduction to Java',
@@ -66,7 +64,8 @@ export class AllcoursedetailsService {
                 'content1':'Arrays - Single Dimensional and Multidimensional arrays',
                 'content2':'Functions, Functions with Arugments & overloading',
                 'content3':'The concept of Static Polymorphism',
-                'content4':'String Handling - String, String Buffer'
+                'content4':'String Handling - String',
+                'content5':'String Buffer'
             }],
           },
           {
@@ -81,8 +80,7 @@ export class AllcoursedetailsService {
             }],
           }
         ],  
-
-        }],
+      }],
       'node': [
         {
           'HeadingName':'Node Course',
