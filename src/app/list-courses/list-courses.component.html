@@ -1,190 +1,338 @@
 <nav aria-label="breadcrumb" style="margin-top:-20px;">
-  <ol class="breadcrumb" >
-    <li class="breadcrumb-item "><a href="#" routerLink="" class="breadcrumb-item1">Home</a></li>
-    <li class="breadcrumb-item active" aria-current="page">ALL Courses</li>
-  </ol>
-</nav>
-<section id="tabs" class="project-tab">
-  <nav class="navdesign">
-    <div class="nav nav-tabs nav-fill" id="nav-tab" role="tablist">
-      <a class="nav-item nav-link active" id="nav-All-tab" data-toggle="tab" href="#nav-All" role="tab" aria-controls="nav-All" aria-selected="true">All Courses</a>
-      <a class="nav-item nav-link " id="nav-java-tab" data-toggle="tab" href="#nav-java" role="tab" aria-controls="nav-java" aria-selected="false">JAVA</a>
-      <a class="nav-item nav-link" id="nav-angular-tab" data-toggle="tab" href="#nav-angular" role="tab" aria-controls="nav-angular" aria-selected="false">ANGULAR</a>
-      <a class="nav-item nav-link" id="nav-node-tab" data-toggle="tab" href="#nav-node" role="tab" aria-controls="nav-node" aria-selected="false">NODE JS</a>
-      <a class="nav-item nav-link" id="nav-react-tab" data-toggle="tab" href="#nav-react" role="tab" aria-controls="nav-react" aria-selected="false">REACT JS</a>
-      <a class="nav-item nav-link" id="nav-cloud-tab" data-toggle="tab" href="#nav-cloud" role="tab" aria-controls="nav-cloud" aria-selected="false">CLOUD COMPUTING</a>
-      <a class="nav-item nav-link" id="nav-data-tab" data-toggle="tab" href="#nav-data" role="tab" aria-controls="nav-data" aria-selected="false">DATA STRUCTURES</a>
-    </div>
+    <ol class="breadcrumb" >
+      <li class="breadcrumb-item "><a href="#" routerLink="" class="breadcrumb-item1">Home</a></li>
+      <li class="breadcrumb-item active" aria-current="page">ALL Courses</li>
+    </ol>
   </nav>
-  <div class="container">
-    <h5 style="padding:10px;">Master Programs</h5>
-    <div class="row">
-      <div class="col-md-12">        
-        <div class="tab-content" id="nav-tabContent">
-          <div class="tab-pane fade show active" id="nav-All" role="tabpanel" aria-labelledby="nav-All-tab">
-            <div class="card card1" *ngFor ="let courses of allcouseres">
-              <div class="row">
-                <div class="col-md-4 text-center">
-                  <img src="../../assets/nodejs1.jpg" class="img-fluid">
-                </div>
-                <div class="col-md-5">
-                  <h6>{{courses.UiCourseName}}</h6>
-                  <p style="color:gray;">&#9679; &nbsp;{{courses.nofHourse}} &nbsp;&#9679; &nbsp;{{courses.Level}}</p>
-                  <p style="color:gray;">{{courses.couserdescriptiom}}</p>
-                </div>
-                <div class="col-md-3 text-center">
-                  <p>
-                    <i class='fa fa-star' style='font-size:20px;color:#f4bd37;padding-top: 15px;'></i>
-                    <i class='fa fa-star' style='font-size:20px;color:#f4bd37;padding-top: 15px;'></i>
-                    <i class='fa fa-star' style='font-size:20px;color:#f4bd37;padding-top: 15px;'></i>
-                    <i class='fa fa-star' style='font-size:20px;color:#f4bd37;padding-top: 15px;'></i>
-                    <i class='fa fa-star' style='font-size:20px;color:#f4bd37;padding-top: 15px;'></i> 5.0<br>({{courses.rating}} Ratings)
-                  </p>
-                  <a href="" [routerLink]="['/singleCourse', courses.courseName]" class="btn btn-primary">View More Details</a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="tab-pane fade" id="nav-java" role="tabpanel" aria-labelledby="nav-java-tab">
-            <div class="card card1" *ngFor ="let courses of Java">
-              <div class="row">
-                <div class="col-md-4 text-center">
-                  <img src="../../assets/nodejs1.jpg" class="img-fluid">
-                </div>
-                <div class="col-md-5">
-                  <h6>{{courses.UiCourseName}}</h6>
-                  <p style="color:gray;">&#9679; &nbsp;{{courses.nofHourse}} &nbsp;&#9679; &nbsp;{{courses.Level}}</p>
-                  <p style="color:gray;">{{courses.couserdescriptiom}}</p>
-                </div>
-                <div class="col-md-3 text-center">
-                  <p>
-                    <i class='fa fa-star' style='font-size:20px;color:#f4bd37;padding-top: 15px;'></i>
-                    <i class='fa fa-star' style='font-size:20px;color:#f4bd37;padding-top: 15px;'></i>
-                    <i class='fa fa-star' style='font-size:20px;color:#f4bd37;padding-top: 15px;'></i>
-                    <i class='fa fa-star' style='font-size:20px;color:#f4bd37;padding-top: 15px;'></i>
-                    <i class='fa fa-star' style='font-size:20px;color:#f4bd37;padding-top: 15px;'></i> 5.0<br>({{courses.rating}} Ratings)
-                  </p>
-                  <a href="" routerLink="/singleCourse" class="btn btn-primary">View More Details</a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="tab-pane fade" id="nav-angular" role="tabpanel" aria-labelledby="nav-angular-tab">
-            <div class="card card1" *ngFor ="let courses of Angular">
-              <div class="row">
-                <div class="col-md-4 text-center">
-                  <img src="../../assets/nodejs1.jpg" class="img-fluid">
-                </div>
-                <div class="col-md-5">
-                  <h6>{{courses.UiCourseName}}</h6>
-                  <p style="color:gray;">&#9679; &nbsp;{{courses.nofHourse}} &nbsp;&#9679; &nbsp;{{courses.Level}}</p>
-                  <p style="color:gray;">{{courses.couserdescriptiom}}</p>
-                </div>
-                <div class="col-md-3 text-center">
-                  <p>
-                    <i class='fa fa-star' style='font-size:20px;color:#f4bd37;padding-top: 15px;'></i>
-                    <i class='fa fa-star' style='font-size:20px;color:#f4bd37;padding-top: 15px;'></i>
-                    <i class='fa fa-star' style='font-size:20px;color:#f4bd37;padding-top: 15px;'></i>
-                    <i class='fa fa-star' style='font-size:20px;color:#f4bd37;padding-top: 15px;'></i>
-                    <i class='fa fa-star' style='font-size:20px;color:#f4bd37;padding-top: 15px;'></i> 5.0<br>({{courses.rating}} Ratings)
-                  </p>
-                  <a href="" routerLink="/singleCourse" class="btn btn-primary">View More Details</a>
+  <section id="tabs" class="project-tab">
+    <nav class="navdesign">
+      <div class="nav nav-tabs nav-fill" id="nav-tab" role="tablist">
+        <a class="nav-item nav-link active" id="nav-All-tab" data-toggle="tab" href="#nav-All" role="tab" aria-controls="nav-All" aria-selected="true">All Courses</a>
+        <a class="nav-item nav-link " id="nav-java-tab" data-toggle="tab" href="#nav-java" role="tab" aria-controls="nav-java" aria-selected="false">JAVA</a>
+        <a class="nav-item nav-link" id="nav-angular-tab" data-toggle="tab" href="#nav-angular" role="tab" aria-controls="nav-angular" aria-selected="false">ANGULAR</a>
+        <a class="nav-item nav-link" id="nav-node-tab" data-toggle="tab" href="#nav-node" role="tab" aria-controls="nav-node" aria-selected="false">NODE JS</a>
+        <a class="nav-item nav-link" id="nav-react-tab" data-toggle="tab" href="#nav-react" role="tab" aria-controls="nav-react" aria-selected="false">REACT JS</a>
+        <a class="nav-item nav-link" id="nav-cloud-tab" data-toggle="tab" href="#nav-cloud" role="tab" aria-controls="nav-cloud" aria-selected="false">CLOUD COMPUTING</a>
+        <a class="nav-item nav-link" id="nav-data-tab" data-toggle="tab" href="#nav-data" role="tab" aria-controls="nav-data" aria-selected="false">DATA STRUCTURES</a>
+      </div>
+    </nav>
+    <div class="container">
+      <h5 style="padding:10px;">Master Programs</h5>
+      <div class="row">
+        <div class="col-md-12">        
+          <div class="tab-content" id="nav-tabContent">
+            <div class="tab-pane fade show active" id="nav-All" role="tabpanel" aria-labelledby="nav-All-tab">
+              <div class="card card1" *ngFor ="let courses of allcouseres">
+                <div class="row">
+                  <div class="col-md-4 text-center">
+                    <img src="{{courses.imgUrl}}" class="img-fluid">
+                  </div>
+                  <div class="col-md-5">
+                    <h6>{{courses.UiCourseName}}</h6>
+                    <p style="color:gray;">&#9679; &nbsp;{{courses.nofHourse}} &nbsp;&#9679; &nbsp;{{courses.Level}}</p>
+                    <p style="color:gray;">{{courses.couserdescriptiom}}</p>
+                  </div>
+                  <div class="col-md-3 text-center">
+                    <p *ngIf="courses.stars ==5">
+                      <i class='fa fa-star' style='font-size:20px;color:#f4bd37;padding-top: 15px;'></i>
+                      <i class='fa fa-star' style='font-size:20px;color:#f4bd37;padding-top: 15px;'></i>
+                      <i class='fa fa-star' style='font-size:20px;color:#f4bd37;padding-top: 15px;'></i>
+                      <i class='fa fa-star' style='font-size:20px;color:#f4bd37;padding-top: 15px;'></i>
+                      <i class='fa fa-star' style='font-size:20px;color:#f4bd37;padding-top: 15px;'></i>&nbsp;{{courses.stars}}<br>({{courses.rating}} Ratings)
+                    </p>
+                    <p *ngIf="courses.stars == 4">
+                      <i class='fa fa-star' style='font-size:20px;color:#f4bd37;padding-top: 15px;'></i>
+                      <i class='fa fa-star' style='font-size:20px;color:#f4bd37;padding-top: 15px;'></i>
+                      <i class='fa fa-star' style='font-size:20px;color:#f4bd37;padding-top: 15px;'></i>
+                      <i class='fa fa-star' style='font-size:20px;color:#f4bd37;padding-top: 15px;'></i>
+                      <i class='fa fa-star' style='font-size:20px;color:lightgrey;padding-top: 15px;'></i>&nbsp;{{courses.stars}}<br>({{courses.rating}} Ratings)
+                    </p>
+                    <p *ngIf="courses.stars ==3">
+                      <i class='fa fa-star' style='font-size:20px;color:#f4bd37;padding-top: 15px;'></i>
+                      <i class='fa fa-star' style='font-size:20px;color:#f4bd37;padding-top: 15px;'></i>
+                      <i class='fa fa-star' style='font-size:20px;color:#f4bd37;padding-top: 15px;'></i>
+                      <i class='fa fa-star' style='font-size:20px;color:lightgrey;padding-top: 15px;'></i>
+                      <i class='fa fa-star' style='font-size:20px;color:lightgrey;padding-top: 15px;'></i>&nbsp; {{courses.stars}}<br>({{courses.rating}} Ratings)
+                    </p>
+                    <p *ngIf="courses.stars ==2">
+                      <i class='fa fa-star' style='font-size:20px;color:#f4bd37;padding-top: 15px;'></i>
+                      <i class='fa fa-star' style='font-size:20px;color:#f4bd37;padding-top: 15px;'></i>
+                      <i class='fa fa-star' style='font-size:20px;color:lightgrey;padding-top: 15px;'></i>
+                      <i class='fa fa-star' style='font-size:20px;color:lightgrey;padding-top: 15px;'></i>
+                      <i class='fa fa-star' style='font-size:20px;color:lightgrey;padding-top: 15px;'></i>&nbsp; {{courses.stars}}<br>({{courses.rating}} Ratings)
+                    </p>
+                    <a href="" [routerLink]="['/singleCourse', courses.courseName]" class="btn btn-primary">View More Details</a>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-          <div class="tab-pane fade" id="nav-node" role="tabpanel" aria-labelledby="nav-node-tab">
-            <div class="card card1" *ngFor ="let courses of Nodejs">
-              <div class="row">
-                <div class="col-md-4 text-center">
-                  <img src="../../assets/nodejs1.jpg" class="img-fluid">
-                </div>
-                <div class="col-md-5">
-                  <h6>{{courses.UiCourseName}}</h6>
-                  <p style="color:gray;">&#9679; &nbsp;{{courses.nofHourse}} &nbsp;&#9679; &nbsp;{{courses.Level}}</p>
-                  <p style="color:gray;">{{courses.couserdescriptiom}}</p>
-                </div>
-                <div class="col-md-3 text-center">
-                  <p>
-                    <i class='fa fa-star' style='font-size:20px;color:#f4bd37;padding-top: 15px;'></i>
-                    <i class='fa fa-star' style='font-size:20px;color:#f4bd37;padding-top: 15px;'></i>
-                    <i class='fa fa-star' style='font-size:20px;color:#f4bd37;padding-top: 15px;'></i>
-                    <i class='fa fa-star' style='font-size:20px;color:#f4bd37;padding-top: 15px;'></i>
-                    <i class='fa fa-star' style='font-size:20px;color:#f4bd37;padding-top: 15px;'></i> 5.0<br>({{courses.rating}} Ratings)
-                  </p>
-                  <a href="" routerLink="/singleCourse" class="btn btn-primary">View More Details</a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="tab-pane fade" id="nav-react" role="tabpanel" aria-labelledby="nav-react-tab">
-            <div class="card card1" *ngFor ="let courses of React">
-              <div class="row">
-                <div class="col-md-4 text-center">
-                  <img src="../../assets/nodejs1.jpg" class="img-fluid">
-                </div>
-                <div class="col-md-5">
-                  <h6>{{courses.UiCourseName}}</h6>
-                  <p style="color:gray;">&#9679; &nbsp;{{courses.nofHourse}} &nbsp;&#9679; &nbsp;{{courses.Level}}</p>
-                  <p style="color:gray;">{{courses.couserdescriptiom}}</p>
-                </div>
-                <div class="col-md-3 text-center">
-                  <p>
-                    <i class='fa fa-star' style='font-size:20px;color:#f4bd37;padding-top: 15px;'></i>
-                    <i class='fa fa-star' style='font-size:20px;color:#f4bd37;padding-top: 15px;'></i>
-                    <i class='fa fa-star' style='font-size:20px;color:#f4bd37;padding-top: 15px;'></i>
-                    <i class='fa fa-star' style='font-size:20px;color:#f4bd37;padding-top: 15px;'></i>
-                    <i class='fa fa-star' style='font-size:20px;color:#f4bd37;padding-top: 15px;'></i> 5.0<br>({{courses.rating}} Ratings)
-                  </p>
-                  <a href="" routerLink="/singleCourse" class="btn btn-primary">View More Details</a>
+            <div class="tab-pane fade" id="nav-java" role="tabpanel" aria-labelledby="nav-java-tab">
+              <div class="card card1" *ngFor ="let courses of Java">
+                <div class="row">
+                  <div class="col-md-4 text-center">
+                    <img src="{{courses.imgUrl}}" class="img-fluid">
+                  </div>
+                  <div class="col-md-5">
+                    <h6>{{courses.UiCourseName}}</h6>
+                    <p style="color:gray;">&#9679; &nbsp;{{courses.nofHourse}} &nbsp;&#9679; &nbsp;{{courses.Level}}</p>
+                    <p style="color:gray;">{{courses.couserdescriptiom}}</p>
+                  </div>
+                  <div class="col-md-3 text-center">
+                    <p *ngIf="courses.stars ==5">
+                      <i class='fa fa-star' style='font-size:20px;color:#f4bd37;padding-top: 15px;'></i>
+                      <i class='fa fa-star' style='font-size:20px;color:#f4bd37;padding-top: 15px;'></i>
+                      <i class='fa fa-star' style='font-size:20px;color:#f4bd37;padding-top: 15px;'></i>
+                      <i class='fa fa-star' style='font-size:20px;color:#f4bd37;padding-top: 15px;'></i>
+                      <i class='fa fa-star' style='font-size:20px;color:#f4bd37;padding-top: 15px;'></i>&nbsp;{{courses.stars}}<br>({{courses.rating}} Ratings)
+                    </p>
+                    <p *ngIf="courses.stars == 4">
+                      <i class='fa fa-star' style='font-size:20px;color:#f4bd37;padding-top: 15px;'></i>
+                      <i class='fa fa-star' style='font-size:20px;color:#f4bd37;padding-top: 15px;'></i>
+                      <i class='fa fa-star' style='font-size:20px;color:#f4bd37;padding-top: 15px;'></i>
+                      <i class='fa fa-star' style='font-size:20px;color:#f4bd37;padding-top: 15px;'></i>
+                      <i class='fa fa-star' style='font-size:20px;color:lightgrey;padding-top: 15px;'></i>&nbsp;{{courses.stars}}<br>({{courses.rating}} Ratings)
+                    </p>
+                    <p *ngIf="courses.stars ==3">
+                      <i class='fa fa-star' style='font-size:20px;color:#f4bd37;padding-top: 15px;'></i>
+                      <i class='fa fa-star' style='font-size:20px;color:#f4bd37;padding-top: 15px;'></i>
+                      <i class='fa fa-star' style='font-size:20px;color:#f4bd37;padding-top: 15px;'></i>
+                      <i class='fa fa-star' style='font-size:20px;color:lightgrey;padding-top: 15px;'></i>
+                      <i class='fa fa-star' style='font-size:20px;color:lightgrey;padding-top: 15px;'></i>&nbsp; {{courses.stars}}<br>({{courses.rating}} Ratings)
+                    </p>
+                    <p *ngIf="courses.stars ==2">
+                      <i class='fa fa-star' style='font-size:20px;color:#f4bd37;padding-top: 15px;'></i>
+                      <i class='fa fa-star' style='font-size:20px;color:#f4bd37;padding-top: 15px;'></i>
+                      <i class='fa fa-star' style='font-size:20px;color:lightgrey;padding-top: 15px;'></i>
+                      <i class='fa fa-star' style='font-size:20px;color:lightgrey;padding-top: 15px;'></i>
+                      <i class='fa fa-star' style='font-size:20px;color:lightgrey;padding-top: 15px;'></i>&nbsp; {{courses.stars}}<br>({{courses.rating}} Ratings)
+                    </p>
+                    <a href="" [routerLink]="['/singleCourse', courses.courseName]" class="btn btn-primary">View More Details</a>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-          <div class="tab-pane fade" id="nav-cloud" role="tabpanel" aria-labelledby="nav-cloud-tab">
-            <div class="card card1" *ngFor ="let courses of CLOUD">
-              <div class="row">
-                <div class="col-md-4 text-center">
-                  <img src="../../assets/nodejs1.jpg" class="img-fluid">
-                </div>
-                <div class="col-md-5">
-                  <h6>{{courses.UiCourseName}}</h6>
-                  <p style="color:gray;">&#9679; &nbsp;{{courses.nofHourse}} &nbsp;&#9679; &nbsp;{{courses.Level}}</p>
-                  <p style="color:gray;">{{courses.couserdescriptiom}}</p>
-                </div>
-                <div class="col-md-3 text-center">
-                  <p>
-                    <i class='fa fa-star' style='font-size:20px;color:#f4bd37;padding-top: 15px;'></i>
-                    <i class='fa fa-star' style='font-size:20px;color:#f4bd37;padding-top: 15px;'></i>
-                    <i class='fa fa-star' style='font-size:20px;color:#f4bd37;padding-top: 15px;'></i>
-                    <i class='fa fa-star' style='font-size:20px;color:#f4bd37;padding-top: 15px;'></i>
-                    <i class='fa fa-star' style='font-size:20px;color:#f4bd37;padding-top: 15px;'></i> 5.0<br>({{courses.rating}} Ratings)
-                  </p>
-                  <a href="" routerLink="/singleCourse" class="btn btn-primary">View More Details</a>
+            <div class="tab-pane fade" id="nav-angular" role="tabpanel" aria-labelledby="nav-angular-tab">
+              <div class="card card1" *ngFor ="let courses of Angular">
+                <div class="row">
+                  <div class="col-md-4 text-center">
+                    <img src="{{courses.imgUrl}}" class="img-fluid">
+                  </div>
+                  <div class="col-md-5">
+                    <h6>{{courses.UiCourseName}}</h6>
+                    <p style="color:gray;">&#9679; &nbsp;{{courses.nofHourse}} &nbsp;&#9679; &nbsp;{{courses.Level}}</p>
+                    <p style="color:gray;">{{courses.couserdescriptiom}}</p>
+                  </div>
+                  <div class="col-md-3 text-center">
+                    <p *ngIf="courses.stars ==5">
+                      <i class='fa fa-star' style='font-size:20px;color:#f4bd37;padding-top: 15px;'></i>
+                      <i class='fa fa-star' style='font-size:20px;color:#f4bd37;padding-top: 15px;'></i>
+                      <i class='fa fa-star' style='font-size:20px;color:#f4bd37;padding-top: 15px;'></i>
+                      <i class='fa fa-star' style='font-size:20px;color:#f4bd37;padding-top: 15px;'></i>
+                      <i class='fa fa-star' style='font-size:20px;color:#f4bd37;padding-top: 15px;'></i>&nbsp;{{courses.stars}}<br>({{courses.rating}} Ratings)
+                    </p>
+                    <p *ngIf="courses.stars == 4">
+                      <i class='fa fa-star' style='font-size:20px;color:#f4bd37;padding-top: 15px;'></i>
+                      <i class='fa fa-star' style='font-size:20px;color:#f4bd37;padding-top: 15px;'></i>
+                      <i class='fa fa-star' style='font-size:20px;color:#f4bd37;padding-top: 15px;'></i>
+                      <i class='fa fa-star' style='font-size:20px;color:#f4bd37;padding-top: 15px;'></i>
+                      <i class='fa fa-star' style='font-size:20px;color:lightgrey;padding-top: 15px;'></i>&nbsp;{{courses.stars}}<br>({{courses.rating}} Ratings)
+                    </p>
+                    <p *ngIf="courses.stars ==3">
+                      <i class='fa fa-star' style='font-size:20px;color:#f4bd37;padding-top: 15px;'></i>
+                      <i class='fa fa-star' style='font-size:20px;color:#f4bd37;padding-top: 15px;'></i>
+                      <i class='fa fa-star' style='font-size:20px;color:#f4bd37;padding-top: 15px;'></i>
+                      <i class='fa fa-star' style='font-size:20px;color:lightgrey;padding-top: 15px;'></i>
+                      <i class='fa fa-star' style='font-size:20px;color:lightgrey;padding-top: 15px;'></i>&nbsp; {{courses.stars}}<br>({{courses.rating}} Ratings)
+                    </p>
+                    <p *ngIf="courses.stars ==2">
+                      <i class='fa fa-star' style='font-size:20px;color:#f4bd37;padding-top: 15px;'></i>
+                      <i class='fa fa-star' style='font-size:20px;color:#f4bd37;padding-top: 15px;'></i>
+                      <i class='fa fa-star' style='font-size:20px;color:lightgrey;padding-top: 15px;'></i>
+                      <i class='fa fa-star' style='font-size:20px;color:lightgrey;padding-top: 15px;'></i>
+                      <i class='fa fa-star' style='font-size:20px;color:lightgrey;padding-top: 15px;'></i>&nbsp; {{courses.stars}}<br>({{courses.rating}} Ratings)
+                    </p>
+                    <a href="" [routerLink]="['/singleCourse', courses.courseName]" class="btn btn-primary">View More Details</a>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-          <div class="tab-pane fade" id="nav-data" role="tabpanel" aria-labelledby="nav-data-tab">
-            <div class="card card1" *ngFor ="let courses of DS">
-              <div class="row">
-                <div class="col-md-4 text-center">
-                  <img src="../../assets/nodejs1.jpg" class="img-fluid">
+            <div class="tab-pane fade" id="nav-node" role="tabpanel" aria-labelledby="nav-node-tab">
+              <div class="card card1" *ngFor ="let courses of Nodejs">
+                <div class="row">
+                  <div class="col-md-4 text-center">
+                    <img src="{{courses.imgUrl}}" class="img-fluid">
+                  </div>
+                  <div class="col-md-5">
+                    <h6>{{courses.UiCourseName}}</h6>
+                    <p style="color:gray;">&#9679; &nbsp;{{courses.nofHourse}} &nbsp;&#9679; &nbsp;{{courses.Level}}</p>
+                    <p style="color:gray;">{{courses.couserdescriptiom}}</p>
+                  </div>
+                  <div class="col-md-3 text-center">
+                    <p *ngIf="courses.stars ==5">
+                      <i class='fa fa-star' style='font-size:20px;color:#f4bd37;padding-top: 15px;'></i>
+                      <i class='fa fa-star' style='font-size:20px;color:#f4bd37;padding-top: 15px;'></i>
+                      <i class='fa fa-star' style='font-size:20px;color:#f4bd37;padding-top: 15px;'></i>
+                      <i class='fa fa-star' style='font-size:20px;color:#f4bd37;padding-top: 15px;'></i>
+                      <i class='fa fa-star' style='font-size:20px;color:#f4bd37;padding-top: 15px;'></i>&nbsp;{{courses.stars}}<br>({{courses.rating}} Ratings)
+                    </p>
+                    <p *ngIf="courses.stars == 4">
+                      <i class='fa fa-star' style='font-size:20px;color:#f4bd37;padding-top: 15px;'></i>
+                      <i class='fa fa-star' style='font-size:20px;color:#f4bd37;padding-top: 15px;'></i>
+                      <i class='fa fa-star' style='font-size:20px;color:#f4bd37;padding-top: 15px;'></i>
+                      <i class='fa fa-star' style='font-size:20px;color:#f4bd37;padding-top: 15px;'></i>
+                      <i class='fa fa-star' style='font-size:20px;color:lightgrey;padding-top: 15px;'></i>&nbsp;{{courses.stars}}<br>({{courses.rating}} Ratings)
+                    </p>
+                    <p *ngIf="courses.stars ==3">
+                      <i class='fa fa-star' style='font-size:20px;color:#f4bd37;padding-top: 15px;'></i>
+                      <i class='fa fa-star' style='font-size:20px;color:#f4bd37;padding-top: 15px;'></i>
+                      <i class='fa fa-star' style='font-size:20px;color:#f4bd37;padding-top: 15px;'></i>
+                      <i class='fa fa-star' style='font-size:20px;color:lightgrey;padding-top: 15px;'></i>
+                      <i class='fa fa-star' style='font-size:20px;color:lightgrey;padding-top: 15px;'></i>&nbsp; {{courses.stars}}<br>({{courses.rating}} Ratings)
+                    </p>
+                    <p *ngIf="courses.stars ==2">
+                      <i class='fa fa-star' style='font-size:20px;color:#f4bd37;padding-top: 15px;'></i>
+                      <i class='fa fa-star' style='font-size:20px;color:#f4bd37;padding-top: 15px;'></i>
+                      <i class='fa fa-star' style='font-size:20px;color:lightgrey;padding-top: 15px;'></i>
+                      <i class='fa fa-star' style='font-size:20px;color:lightgrey;padding-top: 15px;'></i>
+                      <i class='fa fa-star' style='font-size:20px;color:lightgrey;padding-top: 15px;'></i>&nbsp; {{courses.stars}}<br>({{courses.rating}} Ratings)
+                    </p>
+                    <a href="" [routerLink]="['/singleCourse', courses.courseName]" class="btn btn-primary">View More Details</a>
+                  </div>
                 </div>
-                <div class="col-md-5">
-                  <h6>{{courses.UiCourseName}}</h6>
-                  <p style="color:gray;">&#9679; &nbsp;{{courses.nofHourse}} &nbsp;&#9679; &nbsp;{{courses.Level}}</p>
-                  <p style="color:gray;">{{courses.couserdescriptiom}}</p>
+              </div>
+            </div>
+            <div class="tab-pane fade" id="nav-react" role="tabpanel" aria-labelledby="nav-react-tab">
+              <div class="card card1" *ngFor ="let courses of React">
+                <div class="row">
+                  <div class="col-md-4 text-center">
+                    <img src="{{courses.imgUrl}}" class="img-fluid">
+                  </div>
+                  <div class="col-md-5">
+                    <h6>{{courses.UiCourseName}}</h6>
+                    <p style="color:gray;">&#9679; &nbsp;{{courses.nofHourse}} &nbsp;&#9679; &nbsp;{{courses.Level}}</p>
+                    <p style="color:gray;">{{courses.couserdescriptiom}}</p>
+                  </div>
+                  <div class="col-md-3 text-center">
+                    <p *ngIf="courses.stars ==5">
+                      <i class='fa fa-star' style='font-size:20px;color:#f4bd37;padding-top: 15px;'></i>
+                      <i class='fa fa-star' style='font-size:20px;color:#f4bd37;padding-top: 15px;'></i>
+                      <i class='fa fa-star' style='font-size:20px;color:#f4bd37;padding-top: 15px;'></i>
+                      <i class='fa fa-star' style='font-size:20px;color:#f4bd37;padding-top: 15px;'></i>
+                      <i class='fa fa-star' style='font-size:20px;color:#f4bd37;padding-top: 15px;'></i>&nbsp;{{courses.stars}}<br>({{courses.rating}} Ratings)
+                    </p>
+                    <p *ngIf="courses.stars == 4">
+                      <i class='fa fa-star' style='font-size:20px;color:#f4bd37;padding-top: 15px;'></i>
+                      <i class='fa fa-star' style='font-size:20px;color:#f4bd37;padding-top: 15px;'></i>
+                      <i class='fa fa-star' style='font-size:20px;color:#f4bd37;padding-top: 15px;'></i>
+                      <i class='fa fa-star' style='font-size:20px;color:#f4bd37;padding-top: 15px;'></i>
+                      <i class='fa fa-star' style='font-size:20px;color:lightgrey;padding-top: 15px;'></i>&nbsp;{{courses.stars}}<br>({{courses.rating}} Ratings)
+                    </p>
+                    <p *ngIf="courses.stars ==3">
+                      <i class='fa fa-star' style='font-size:20px;color:#f4bd37;padding-top: 15px;'></i>
+                      <i class='fa fa-star' style='font-size:20px;color:#f4bd37;padding-top: 15px;'></i>
+                      <i class='fa fa-star' style='font-size:20px;color:#f4bd37;padding-top: 15px;'></i>
+                      <i class='fa fa-star' style='font-size:20px;color:lightgrey;padding-top: 15px;'></i>
+                      <i class='fa fa-star' style='font-size:20px;color:lightgrey;padding-top: 15px;'></i>&nbsp; {{courses.stars}}<br>({{courses.rating}} Ratings)
+                    </p>
+                    <p *ngIf="courses.stars ==2">
+                      <i class='fa fa-star' style='font-size:20px;color:#f4bd37;padding-top: 15px;'></i>
+                      <i class='fa fa-star' style='font-size:20px;color:#f4bd37;padding-top: 15px;'></i>
+                      <i class='fa fa-star' style='font-size:20px;color:lightgrey;padding-top: 15px;'></i>
+                      <i class='fa fa-star' style='font-size:20px;color:lightgrey;padding-top: 15px;'></i>
+                      <i class='fa fa-star' style='font-size:20px;color:lightgrey;padding-top: 15px;'></i>&nbsp; {{courses.stars}}<br>({{courses.rating}} Ratings)
+                    </p>
+                    <a href="" [routerLink]="['/singleCourse', courses.courseName]" class="btn btn-primary">View More Details</a>
+                  </div>
                 </div>
-                <div class="col-md-3 text-center">
-                  <p>
-                    <i class='fa fa-star' style='font-size:20px;color:#f4bd37;padding-top: 15px;'></i>
-                    <i class='fa fa-star' style='font-size:20px;color:#f4bd37;padding-top: 15px;'></i>
-                    <i class='fa fa-star' style='font-size:20px;color:#f4bd37;padding-top: 15px;'></i>
-                    <i class='fa fa-star' style='font-size:20px;color:#f4bd37;padding-top: 15px;'></i>
-                    <i class='fa fa-star' style='font-size:20px;color:#f4bd37;padding-top: 15px;'></i> 5.0<br>({{courses.rating}} Ratings)
-                  </p>
-                  <a href="" routerLink="/singleCourse" class="btn btn-primary">View More Details</a>
+              </div>
+            </div>
+            <div class="tab-pane fade" id="nav-cloud" role="tabpanel" aria-labelledby="nav-cloud-tab">
+              <div class="card card1" *ngFor ="let courses of CLOUD">
+                <div class="row">
+                  <div class="col-md-4 text-center">
+                    <img src="{{courses.imgUrl}}" class="img-fluid">
+                  </div>
+                  <div class="col-md-5">
+                    <h6>{{courses.UiCourseName}}</h6>
+                    <p style="color:gray;">&#9679; &nbsp;{{courses.nofHourse}} &nbsp;&#9679; &nbsp;{{courses.Level}}</p>
+                    <p style="color:gray;">{{courses.couserdescriptiom}}</p>
+                  </div>
+                  <div class="col-md-3 text-center">
+                    <p *ngIf="courses.stars ==5">
+                      <i class='fa fa-star' style='font-size:20px;color:#f4bd37;padding-top: 15px;'></i>
+                      <i class='fa fa-star' style='font-size:20px;color:#f4bd37;padding-top: 15px;'></i>
+                      <i class='fa fa-star' style='font-size:20px;color:#f4bd37;padding-top: 15px;'></i>
+                      <i class='fa fa-star' style='font-size:20px;color:#f4bd37;padding-top: 15px;'></i>
+                      <i class='fa fa-star' style='font-size:20px;color:#f4bd37;padding-top: 15px;'></i>&nbsp;{{courses.stars}}<br>({{courses.rating}} Ratings)
+                    </p>
+                    <p *ngIf="courses.stars == 4">
+                      <i class='fa fa-star' style='font-size:20px;color:#f4bd37;padding-top: 15px;'></i>
+                      <i class='fa fa-star' style='font-size:20px;color:#f4bd37;padding-top: 15px;'></i>
+                      <i class='fa fa-star' style='font-size:20px;color:#f4bd37;padding-top: 15px;'></i>
+                      <i class='fa fa-star' style='font-size:20px;color:#f4bd37;padding-top: 15px;'></i>
+                      <i class='fa fa-star' style='font-size:20px;color:lightgrey;padding-top: 15px;'></i>&nbsp;{{courses.stars}}<br>({{courses.rating}} Ratings)
+                    </p>
+                    <p *ngIf="courses.stars ==3">
+                      <i class='fa fa-star' style='font-size:20px;color:#f4bd37;padding-top: 15px;'></i>
+                      <i class='fa fa-star' style='font-size:20px;color:#f4bd37;padding-top: 15px;'></i>
+                      <i class='fa fa-star' style='font-size:20px;color:#f4bd37;padding-top: 15px;'></i>
+                      <i class='fa fa-star' style='font-size:20px;color:lightgrey;padding-top: 15px;'></i>
+                      <i class='fa fa-star' style='font-size:20px;color:lightgrey;padding-top: 15px;'></i>&nbsp; {{courses.stars}}<br>({{courses.rating}} Ratings)
+                    </p>
+                    <p *ngIf="courses.stars ==2">
+                      <i class='fa fa-star' style='font-size:20px;color:#f4bd37;padding-top: 15px;'></i>
+                      <i class='fa fa-star' style='font-size:20px;color:#f4bd37;padding-top: 15px;'></i>
+                      <i class='fa fa-star' style='font-size:20px;color:lightgrey;padding-top: 15px;'></i>
+                      <i class='fa fa-star' style='font-size:20px;color:lightgrey;padding-top: 15px;'></i>
+                      <i class='fa fa-star' style='font-size:20px;color:lightgrey;padding-top: 15px;'></i>&nbsp; {{courses.stars}}<br>({{courses.rating}} Ratings)
+                    </p>
+                    <a href="" [routerLink]="['/singleCourse', courses.courseName]" class="btn btn-primary">View More Details</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="tab-pane fade" id="nav-data" role="tabpanel" aria-labelledby="nav-data-tab">
+              <div class="card card1" *ngFor ="let courses of DS">
+                <div class="row">
+                  <div class="col-md-4 text-center">
+                    <img src="{{courses.imgUrl}}" class="img-fluid">
+                  </div>
+                  <div class="col-md-5">
+                    <h6>{{courses.UiCourseName}}</h6>
+                    <p style="color:gray;">&#9679; &nbsp;{{courses.nofHourse}} &nbsp;&#9679; &nbsp;{{courses.Level}}</p>
+                    <p style="color:gray;">{{courses.couserdescriptiom}}</p>
+                  </div>
+                  <div class="col-md-3 text-center">
+                    <p *ngIf="courses.stars ==5">
+                      <i class='fa fa-star' style='font-size:20px;color:#f4bd37;padding-top: 15px;'></i>
+                      <i class='fa fa-star' style='font-size:20px;color:#f4bd37;padding-top: 15px;'></i>
+                      <i class='fa fa-star' style='font-size:20px;color:#f4bd37;padding-top: 15px;'></i>
+                      <i class='fa fa-star' style='font-size:20px;color:#f4bd37;padding-top: 15px;'></i>
+                      <i class='fa fa-star' style='font-size:20px;color:#f4bd37;padding-top: 15px;'></i>&nbsp;{{courses.stars}}<br>({{courses.rating}} Ratings)
+                    </p>
+                    <p *ngIf="courses.stars == 4">
+                      <i class='fa fa-star' style='font-size:20px;color:#f4bd37;padding-top: 15px;'></i>
+                      <i class='fa fa-star' style='font-size:20px;color:#f4bd37;padding-top: 15px;'></i>
+                      <i class='fa fa-star' style='font-size:20px;color:#f4bd37;padding-top: 15px;'></i>
+                      <i class='fa fa-star' style='font-size:20px;color:#f4bd37;padding-top: 15px;'></i>
+                      <i class='fa fa-star' style='font-size:20px;color:lightgrey;padding-top: 15px;'></i>&nbsp;{{courses.stars}}<br>({{courses.rating}} Ratings)
+                    </p>
+                    <p *ngIf="courses.stars ==3">
+                      <i class='fa fa-star' style='font-size:20px;color:#f4bd37;padding-top: 15px;'></i>
+                      <i class='fa fa-star' style='font-size:20px;color:#f4bd37;padding-top: 15px;'></i>
+                      <i class='fa fa-star' style='font-size:20px;color:#f4bd37;padding-top: 15px;'></i>
+                      <i class='fa fa-star' style='font-size:20px;color:lightgrey;padding-top: 15px;'></i>
+                      <i class='fa fa-star' style='font-size:20px;color:lightgrey;padding-top: 15px;'></i>&nbsp; {{courses.stars}}<br>({{courses.rating}} Ratings)
+                    </p>
+                    <p *ngIf="courses.stars ==2">
+                      <i class='fa fa-star' style='font-size:20px;color:#f4bd37;padding-top: 15px;'></i>
+                      <i class='fa fa-star' style='font-size:20px;color:#f4bd37;padding-top: 15px;'></i>
+                      <i class='fa fa-star' style='font-size:20px;color:lightgrey;padding-top: 15px;'></i>
+                      <i class='fa fa-star' style='font-size:20px;color:lightgrey;padding-top: 15px;'></i>
+                      <i class='fa fa-star' style='font-size:20px;color:lightgrey;padding-top: 15px;'></i>&nbsp; {{courses.stars}}<br>({{courses.rating}} Ratings)
+                    </p>
+                    <a href="" [routerLink]="['/singleCourse', courses.courseName]" class="btn btn-primary">View More Details</a>
+                  </div>
                 </div>
               </div>
             </div>
@@ -192,6 +340,5 @@
         </div>
       </div>
     </div>
-  </div>
-</section>
-<router-outlet></router-outlet>
+  </section>
+  <router-outlet></router-outlet>

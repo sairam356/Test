@@ -1,82 +1,110 @@
-<div class="container">
-  <form>
-    <div class="form-row">
-      <div class="form-group col-md-6">
-        <label for="inputEmail4">Name</label>
-        <input type="text" class="form-control" id="inputEmail4" placeholder="Enter Your Name" required>
-      </div>
-      <div class="form-group col-md-6">
-        <label for="inputPassword4">Technology</label>
-        <input type="text" class="form-control" id="inputPassword4" placeholder="Enter Technology" required>
-      </div>
-    </div>
-    <div class="form-row">
-      <div class="form-group col-md-6">
-        <label for="inputEmail4">Email</label>
-        <input type="email" class="form-control" id="inputEmail4" placeholder="Enter your Email" required>
-      </div>
-      <div class="form-group col-md-6">
-        <label for="inputPassword4">Phone Number</label>
-        <input type="text" class="form-control" id="inputPassword4" placeholder="Enter Your Phone number" required>
-      </div>
-    </div>
-    <div class="form-row">
-      <div class="form-group col-md-6">
-        <label for="inputAddress">Your Location</label>
-        <input type="text" class="form-control" id="inputAddress" placeholder="Enter Your Location" required>
-      </div>
-      <div class="form-group col-md-6">
-        <label for="inputState">&nbsp;</label>
-        <select id="inputState" class="form-control">
-          <option selected>PreferableTime</option>
-          <option>Only Morning</option>
-          <option>Only Evening</option>
-          <option>Weekends</option>
-          <option>Mornning and Evening</option>
-        </select>
-      </div>
-    </div>
-    <div class="form-row">
-      <div class="form-group col-md-6">
-        <label>Estimation Remuneration for students</label>
-        <input type="text" class="form-control" placeholder="Estimation Remuneration for students" required>
-      </div>
-      <div class="form-group col-md-6">
-        <label>Working Company name and Education</label>
-        <input type="text" class="form-control" placeholder="Working Company name and Education" required>
-      </div>
-    </div>
-    <hr />
-    <div class="form-row">
-      <div class="form-group col-md-6">
-        <label>Project Support *</label><br>
-        <div class="custom-control" required>
-          <input type="radio" name="Time" value="Yes">&nbsp; <span style="margin-top:-7px;">Yes</span> &nbsp;&nbsp;&nbsp;
-          <input type="radio" name="Time" value="No">&nbsp; <span style="margin-top:-7px;">No</span>&nbsp;&nbsp;&nbsp;    
+<body>
+  <div class="container" style="padding:5px;">
+    <div class="col-lg-12 col-xl-11 mx-auto">
+      <div class="card card-signin flex-row my-5">
+        <div class="card-img-left d-none d-md-flex">
+        </div>
+        <div class="card-body">
+          <h5 class="card-title text-center">Register</h5>
+          <form class="login100-form" [formGroup]="TrainerregisterForm" (ngSubmit)="onSubmit()">
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                <label>Name</label>
+                <input type="text" formControlName="Name" placeholder="Ravi" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.Name.errors }" />
+                <div *ngIf="submitted && f.Name.errors" class="invalid-feedback">
+                    <div *ngIf="f.Name.errors.required">Name is required</div>
+                </div>
+              </div>
+              <div class="form-group col-md-6">
+                <label>Technology</label>
+                <input type="text" formControlName="Technology" placeholder="Java" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.Technology.errors }" />
+                <div *ngIf="submitted && f.Technology.errors" class="invalid-feedback">
+                    <div *ngIf="f.Technology.errors.required">Technology is required</div>
+                </div>
+              </div>
+            </div>
+            <hr />
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                <label>Email</label>
+                <input type="text" formControlName="email" placeholder="abc@gmail.com" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.email.errors }" />
+                <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
+                    <div *ngIf="f.email.errors.required">Email is required</div>
+                    <div *ngIf="f.email.errors.email">Email must be a valid email address</div>
+                </div>
+              </div>
+              <div class="form-group col-md-6">
+                <label>Phone Number</label>
+                <input type="number" formControlName="PhoneNumber" placeholder="1234567890" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.PhoneNumber.errors }" />
+                <div *ngIf="submitted && f.PhoneNumber.errors" class="invalid-feedback">
+                    <div *ngIf="f.PhoneNumber.errors.required">PhoneNumber is required</div>
+                </div>
+              </div>
+            </div>
+            <hr />
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                <label>Your Location</label>
+                <input type="text" formControlName="Location" placeholder="Vijayawada" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.Location.errors }" />
+                <div *ngIf="submitted && f.Location.errors" class="invalid-feedback">
+                    <div *ngIf="f.Location.errors.required">Location is required</div>
+                </div>
+              </div>
+              <div class="form-group col-md-6">
+                <label for="inputState">Availability&nbsp;</label>
+                <select id="inputState" class="form-control"  formControlName="PreferableTime">
+                  <option *ngFor="let time of TimingsPreferable" [value]="time.id">{{time.name}}</option>
+                </select>
+              </div>
+            </div>
+            <hr />
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                <label>Estimation Remuneration for students</label>
+                <input type="text" formControlName="salary" class="form-control" placeholder="Estimation Remuneration for students" required>
+              </div>
+              <div class="form-group col-md-6">
+                <label>Working Company name and Education</label>
+                <input type="text" formControlName="Details" class="form-control" placeholder="Working Company name and Education" required>
+              </div>
+            </div>
+            <hr />
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                <label>Project Support *</label><br>
+                <div class="custom-control" required>
+                  <input type="radio" name="ProjectSupport" value="Yes" formControlName="ProjectSupport">&nbsp; <span style="margin-top:-7px;">Yes</span><br>
+                  <input type="radio" name="ProjectSupport" value="No" formControlName="ProjectSupport">&nbsp; <span style="margin-top:-7px;">No</span><br>    
+                </div>
+              </div>
+              <div class="form-group col-md-6">
+                <label>Given Training with mini project / Assignment *</label><br>
+                <div class="custom-control" required>
+                  <input type="radio" name="TrainMini" value="Yes" formControlName="TrainMini">&nbsp; <span style="margin-top:-7px;">Yes</span><br>
+                  <input type="radio" name="TrainMini" value="No" formControlName="TrainMini">&nbsp; <span style="margin-top:-7px;">No</span><br>
+                </div>
+              </div>
+            </div>
+            <hr />
+            <div class="form-row">
+              <div class="form-group">
+                <label>After Training Job Support / Reference for Students *</label><br>
+                <div class="custom-control" required>
+                  <input type="radio" name="Trainsuppjob" value="Yes" formControlName="Trainsuppjob">&nbsp; <span style="margin-top:-7px;">Yes</span><br>
+                  <input type="radio" name="Trainsuppjob" value="No" formControlName="Trainsuppjob">&nbsp; <span style="margin-top:-7px;">No</span><br>
+                </div>
+              </div>
+            </div>
+            <hr />
+            <div class="form-group col-md-12" >
+                <textarea name="Queries" formControlName="Queries" class="form-control" placeholder="Your Queries *" style="width: 100%; height: 150px;"></textarea>
+            </div>
+            <div class="form-group col-md-12">
+                <button class="btn btn-primary">Register</button>
+            </div>
+          </form>
         </div>
       </div>
-      <div class="form-group col-md-6">
-        <label>Given Training with mini project / Assignment *</label><br>
-        <div class="custom-control" required>
-          <input type="radio" name="PreferableTime" value="Yes">&nbsp; <span style="margin-top:-7px;">Yes</span> &nbsp;&nbsp;&nbsp;
-          <input type="radio" name="PreferableTime" value="No">&nbsp; <span style="margin-top:-7px;">No</span>&nbsp;&nbsp;&nbsp;
-        </div>
-      </div>
     </div>
-    <hr />
-    <div class="form-row">
-      <div class="form-group">
-        <label>After Training Job Support / Reference for Students *</label><br>
-        <div class="custom-control" required>
-          <input type="radio" name="Preferable" value="Yes">&nbsp; <span style="margin-top:-7px;">Yes</span> &nbsp;&nbsp;&nbsp;
-          <input type="radio" name="Preferable" value="No">&nbsp; <span style="margin-top:-7px;">No</span>&nbsp;&nbsp;&nbsp;
-        </div>
-      </div>
-    </div>
-    <hr />
-    <div class="form-group">
-        <textarea name="txtMsg" class="form-control" placeholder="Your Queries *" style="width: 100%; height: 150px;"></textarea>
-    </div>
-    <button type="submit" style="margin-bottom: 20px;margin-left:475px;" class="btn btn-primary">Apply Now</button>
-  </form>
-</div>
+  </div>
+</body>

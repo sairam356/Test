@@ -22,7 +22,7 @@
     position: absolute;
   }
   .text {
-    padding-top:60px;
+    padding-top:45px;
     padding-left:20px;
     padding-bottom:30px;
     background-color:black;opacity:0.9;
@@ -53,11 +53,11 @@
   .desktopCarouselbutton{
     box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.2);
     margin-left: -50px;
-    margin-bottom: -420px;
+    margin-bottom: -370px;
   }
   .desktopCarouselbutton1{
     box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.2);
     margin-left: 1160px;
-    margin-bottom: -420px;
+    margin-bottom: -370px;
   }
 }

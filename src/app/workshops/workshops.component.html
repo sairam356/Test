@@ -1,0 +1,38 @@
+<!-- <button type="button" class="btn btn-info btn-lg" (click)=openModal()>click to open</button>
+<div class="backdrop" [ngStyle]="{'display':display}"></div>
+<div class="modal" tabindex="-1" role="dialog"  [ngStyle]="{'display':display}">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" aria-label="Close" (click)=onCloseHandled()><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title">Model Title</h4>
+      </div>
+      <div class="modal-body">
+        <input #name placeholder="name" />
+        <input #phone placeholder="phone" />
+        <input #dob placeholder="mm/dd/yyyy" />
+        <input #company placeholder="companyname" />
+        <button (click)="addContact(name.value,phone.value,dob.value,company.value)">Add Contact</button>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" (click)="onCloseHandled()" >Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+<table>
+  <tr>
+  <th>CourseName</th>
+  <th>CourseDescription</th>
+  <th>Rating</th>
+  <th>Hours</th>
+  <th>Delete the details</th>
+  </tr>
+  <tr *ngFor="let todo of contacts">
+    <td >{{todo.name}}</td>
+    <td>{{todo.phone}}</td>
+    <td>{{todo.dob}}</td>
+    <td>{{todo.company}}</td>
+    <td><button (click)="removeContact(todo)">Delete</button></td>
+  </tr>
+</table> -->

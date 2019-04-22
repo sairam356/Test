@@ -2,7 +2,7 @@
   <nav class="navbar-nav fixed-top" style="background-color: white;color:black;font-size: 15px;">
     <ul class="navbar-nav ml-auto" style="padding:10px;">
       <li class="nav-item"><i class="fa fa-envelope" style="padding-left:20px;"></i>&nbsp;class@onlinecourses.com  
-      <i class="fa fa-phone" style="padding-left:20px;"></i>&nbsp;+91-9999999999&nbsp;</li>
+      <i class="fa fa-phone" style="padding-left:20px;"></i>&nbsp;+91-96181177002&nbsp;</li>
     </ul>
   </nav>
   <nav class="navbar navbar-expand-lg navbar-light fixed-top scrolling-navbar" style="background-color:#0060af;margin-top: 40px;">
@@ -13,8 +13,8 @@
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse">
-      <form class="form-inline" style="margin-left:50px;">
-        <input class="form-control" type="search" placeholder="Search" aria-label="Search" style="box-shadow: 4px 4px 14px 0 rgba(0,0,0,0.06);width:370px;border: 1px solid #e8e8e8;border-radius: 1px;">
+      <form class="form-inline"  [formGroup]="SearchForm" (ngSubmit)="onSubmit()" style="margin-left:50px;">
+        <input class="form-control" formControlName="Name" type="text" placeholder="Search" aria-label="Search" style="box-shadow: 4px 4px 14px 0 rgba(0,0,0,0.06);width:370px;border: 1px solid #e8e8e8;border-radius: 1px;">
         <button class="btn" type="submit" style="color:white;margin-left:10px;background: linear-gradient(126deg,#f5a623,#f76b1c);">Search</button>
       </form>
       <ul class="navbar-nav ml-auto">
@@ -22,7 +22,7 @@
           <a class="nav-link" routerLink="/ListCourses" href="#" style="color:white;">Courses</a>
         </li>
         <li class="nav-item" style="padding-left:10px;">
-          <a class="nav-link" href="#" style="color:white;">Project Support</a>
+          <a class="nav-link" href="#" routerLink="/aboutus" style="color:white;">About Us</a>
         </li>
         <li style="padding-top:5px;padding-left:15px;">
           <a class="btn" href="" routerLink="/studentRegister" style="background-color: #d8491d;padding:5px;border-radius: 4px;color:white;font-size: 11px;"> <i class="fa fa-pencil" style="padding-right:5px;color:white;" aria-hidden="true"></i>Student Reg</a>
@@ -30,17 +30,20 @@
         <li style="padding-top:5px;padding-left:15px;">
           <a class="btn btn-primary" href="" routerLink="/TrainerRegister" style="border-radius: 4px;padding:5px;color:white;font-size: 11px;"> <i class="fa fa-pencil" style="padding-right:5px;color:white;" aria-hidden="true"></i>Trainer Reg</a>
         </li>
+        <li style="padding-top:5px;padding-left:15px;">
+          <a class="btn" href="" routerLink="/workshops" style="background-color: #d8491d;border-radius: 4px;padding:5px;color:white;font-size: 11px;">WorkShops</a>
+        </li>
       </ul>
     </div>
   </nav>
 </header>
 <p class="text-center" style="background-color: white;font-size: 15px;padding:25px;margin-top:90px;">
-  <a href="" style="padding-left:17px;padding-right: 17px;color:black;text-decoration: none;padding-top:5px;padding-bottom: 5px;">Cloud Computing</a>
-  <a href="" style="padding-left:17px;padding-right: 17px;color:black;text-decoration: none;padding-top:5px;padding-bottom: 5px;">Cloud Computing</a>
-  <a href="" style="padding-left:17px;padding-right: 17px;color:black;text-decoration: none;padding-top:5px;padding-bottom: 5px;">Cloud Computing</a>
-  <a href="" style="padding-left:17px;padding-right: 17px;color:black;text-decoration: none;padding-top:5px;padding-bottom: 5px;">Cloud Computing</a>
-  <a href="" style="padding-left:17px;padding-right: 17px;color:black;text-decoration: none;padding-top:5px;padding-bottom: 5px;">Cloud Computing</a>
-  <a href="" style="padding-left:17px;padding-right: 17px;color:black;text-decoration: none;padding-top:5px;padding-bottom: 5px;">Cloud Computing</a>
-  <a href="" style="padding-left:17px;padding-right: 17px;color:black;text-decoration: none;padding-top:5px;padding-bottom: 5px;">Cloud Computing</a>
+  <a href="" *ngFor="let java of Java" style="padding-left:17px;padding-right: 17px;color:black;text-decoration: none;padding-top:5px;padding-bottom: 5px;" [routerLink]="['/singleCourse', java.courseName]">Java</a>
+  <a href="" *ngFor="let Angular of Angular" style="padding-left:17px;padding-right: 17px;color:black;text-decoration: none;padding-top:5px;padding-bottom: 5px;" [routerLink]="['/singleCourse', Angular.courseName]">Angular</a>
+  <a href="" *ngFor="let Nodejs of Nodejs" style="padding-left:17px;padding-right: 17px;color:black;text-decoration: none;padding-top:5px;padding-bottom: 5px;" [routerLink]="['/singleCourse', Nodejs.courseName]">Nodejs</a>
+  <a href="" *ngFor="let C of C" style="padding-left:17px;padding-right: 17px;color:black;text-decoration: none;padding-top:5px;padding-bottom: 5px;" [routerLink]="['/singleCourse', C.courseName]">C</a>
+  <a href="" *ngFor="let Spark of Spark" style="padding-left:17px;padding-right: 17px;color:black;text-decoration: none;padding-top:5px;padding-bottom: 5px;" [routerLink]="['/singleCourse', Spark.courseName]">Spark</a>
+  <a href="" *ngFor="let Hadoop of Hadoop" style="padding-left:17px;padding-right: 17px;color:black;text-decoration: none;padding-top:5px;padding-bottom: 5px;" [routerLink]="['/singleCourse', Hadoop.courseName]">Hadoop</a>
+  <a href="" *ngFor="let DataStructure of DataStructure" style="padding-left:17px;padding-right: 17px;color:black;text-decoration: none;padding-top:5px;padding-bottom: 5px;" [routerLink]="['/singleCourse', DataStructure.courseName]">Data Structure</a>
 </p>
 <router-outlet></router-outlet>

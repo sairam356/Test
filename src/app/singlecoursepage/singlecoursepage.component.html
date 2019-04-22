@@ -70,14 +70,14 @@
 <br>
 <div class="container">
   <h4 style="padding-bottom: 10px;"> {{coursedetails.CourseCiruculumName}} </h4>
-  <div id="panel-group">
-    <div class="panel panel-default" *ngFor="let CCurriculum of CourseCurriculumdetail; let i = index">
-      <div class="panel-heading" (click) = "current = i">
-        <h5 class="panel-title">
-          <i class='fa' [class.fa-arrow-right] = "i != current" [class.fa-arrow-down] = "i == current" style="font-size: 15px;"></i>   {{CCurriculum.headerName}}
-        </h5>
+  <div id="accordion">
+    <div class="card" *ngFor="let CCurriculum of CourseCurriculumdetail; let i = index ">
+      <div class="card-header">
+        <a class="card-link" data-toggle="collapse" href="#collapse{{i}}">
+          {{CCurriculum.headerName}}
+        </a>
       </div>
-      <div id="collapse1" class="panel-collapse" [class.collapse]='current != i'>
+      <div id="collapse{{i}}" class="collapse" data-parent="#accordion">
         <div class="card-body">
           <p style="font-size:15px;color:gray;"><b>Learning Objectives:</b> {{CCurriculum.LearningObjectives}}<br>
             <b>Topics:</b><br>
@@ -99,10 +99,25 @@
       <div class="col-md-9">
         <h4>Like the curriculum? Enroll Now</h4>
         <p style="font-size:15px;">Structure your learning and get a certificate to prove it.</p>
-        <form>
-          <input class="form-control" type="number" placeholder="Enter your Number*" required style="width:35%;">
-          <input class="form-control curriculumemail" type="number" placeholder="Enter EmailID*" required>
-          <a class="btn btn-warning curriculumbutton" >Enroll Now</a>
+        <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+          <div class="form-row">
+            <div class="form-group col-md-4">
+              <input class="form-control" type="number" formControlName="PhoneNumber" [ngClass]="{ 'is-invalid': submitted && f.PhoneNumber.errors }" placeholder="Enter your Number*">
+              <div *ngIf="submitted && f.PhoneNumber.errors" class="invalid-feedback">
+                <div *ngIf="f.PhoneNumber.errors.required">PhoneNumber is required</div>
+              </div>
+            </div>
+            <div class="form-group col-md-4">
+              <input class="form-control curriculumemail" type="text" formControlName="email" [ngClass]="{ 'is-invalid': submitted && f.email.errors }" placeholder="Enter EmailID*">
+              <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
+                <div *ngIf="f.email.errors.required">Email is required</div>
+                <div *ngIf="f.email.errors.email">Email must be a valid email address</div>
+              </div>
+            </div>
+            <div class="form-group col-md-4">
+              <button class="btn btn-warning">Enroll Now</button>
+            </div>
+          </div>
         </form>
       </div>
       <div class="col-md-3">

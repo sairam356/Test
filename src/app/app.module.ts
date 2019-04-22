@@ -16,6 +16,10 @@ import { ContactadsComponent } from './contactads/contactads.component';
 import { TrainerregistrationComponent } from './trainerregistration/trainerregistration.component';
 import { StudentregistrationComponent } from './studentregistration/studentregistration.component';
 import { DomSanitizerImpl } from '@angular/platform-browser/src/security/dom_sanitization_service';
+import { ReactiveFormsModule } from '@angular/forms';
+import { WorkshopsComponent } from './workshops/workshops.component';
+import { AboutusComponent } from './aboutus/aboutus.component';
+import { TermsconditionsComponent } from './termsconditions/termsconditions.component';
 
 @NgModule({
   declarations: [
@@ -31,11 +35,15 @@ import { DomSanitizerImpl } from '@angular/platform-browser/src/security/dom_san
     ScrollspycontentComponent,
     ContactadsComponent,
     TrainerregistrationComponent,
-    StudentregistrationComponent
+    StudentregistrationComponent,
+    WorkshopsComponent,
+    AboutusComponent,
+    TermsconditionsComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule
   ],
   providers: [AllcoursedetailsService],
   bootstrap: [AppComponent]

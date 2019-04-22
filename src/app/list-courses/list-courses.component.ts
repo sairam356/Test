@@ -15,8 +15,8 @@ export class ListCoursesComponent implements OnInit {
       nofHourse:"10 HOURS",
       Level:"Intermediate",
       rating :"10",
-      stars:"5",
-      imgUrl:"../../assets/nodejs2.jpg"
+      stars:"4",
+      imgUrl:"../../assets/Java.png"
     }
   ];
   Angular=[
@@ -28,34 +28,47 @@ export class ListCoursesComponent implements OnInit {
       nofHourse:"10 HOURS",
       Level:"Intermediate",
       rating :"9",
-      stars:"5",
-      imgUrl:"../../assets/nodejs3.jpg"
+      stars:"4",
+      imgUrl:"../../assets/nodejs4.jpg"
     }
   ];
   Nodejs=[
     {
       id:"2",
-      courseName:"Node Js",
+      courseName:"Nodejs",
       UiCourseName:"Node.js: The Complete Guide to Build RESTful APIs (2018)",
       couserdescriptiom:"Build and deploy fullstack web apps with NodeJS, React, Redux, Express, and MongoDB.",
       nofHourse:"10 HOURS",
       Level:"Intermediate",
       rating :"8",
-      stars:"5",
-      imgUrl:"../../assets/nodejs1.jpg"
+      stars:"4",
+      imgUrl:"../../assets/nodejs3.jpg"
     }
   ];
   React=[
     {
       id:"2",
-      courseName:"Node Js",
-      UiCourseName:"Node.js: The Complete Guide to Build RESTful APIs (2018)",
+      courseName:"Reactjs",
+      UiCourseName:"React.js: The Complete Guide to Build RESTful APIs (2018)",
       couserdescriptiom:"Build and deploy fullstack web apps with NodeJS, React, Redux, Express, and MongoDB.",
       nofHourse:"10 HOURS",
       Level:"Intermediate",
       rating :"8",
-      stars:"5",
-      imgUrl:"../../assets/nodejs1.jpg"
+      stars:"4",
+      imgUrl:"../../assets/nodejs5.jpg"
+    }
+  ];
+  AWS=[
+    {
+      id:"2",
+      courseName:"AWS",
+      UiCourseName:"AWS Training",
+      couserdescriptiom:"AWS Training is curated by industry professionals as per the industry requirements and demands.",
+      nofHourse:"10 HOURS",
+      Level:"Intermediate",
+      rating :"8",
+      stars:"4",
+      imgUrl:"../../assets/AWS.png"
     }
   ];
   allcouseres=[
@@ -67,19 +80,19 @@ export class ListCoursesComponent implements OnInit {
       nofHourse:"10 HOURS",
       Level:"Intermediate",
       rating :"10",
-      stars:"5",
-      imgUrl:"../../assets/nodejs2.jpg"
+      stars:"4",
+      imgUrl:"../../assets/Java.png"
      },
      {
       id:"2",
-      courseName:"Node Js",
+      courseName:"Nodejs",
       UiCourseName:"Node.js: The Complete Guide to Build RESTful APIs (2018)",
       couserdescriptiom:"Build and deploy fullstack web apps with NodeJS, React, Redux, Express, and MongoDB.",
       nofHourse:"10 HOURS",
       Level:"Intermediate",
       rating :"8",
-      stars:"5",
-      imgUrl:"../../assets/nodejs1.jpg"
+      stars:"4",
+      imgUrl:"../../assets/nodejs3.jpg"
      },
      {
       id:"3",
@@ -89,8 +102,8 @@ export class ListCoursesComponent implements OnInit {
       nofHourse:"10 HOURS",
       Level:"Intermediate",
       rating :"9",
-      stars:"5",
-      imgUrl:"../../assets/nodejs3.jpg"
+      stars:"4",
+      imgUrl:"../../assets/nodejs4.jpg"
      },
      {
       id:"4",
@@ -100,8 +113,8 @@ export class ListCoursesComponent implements OnInit {
       nofHourse:"10 HOURS",
       Level:"Intermediate",
       rating :"7",
-      stars:"5",
-      imgUrl:"../../assets/nodejs4.jpg"
+      stars:"3",
+      imgUrl:"../../assets/AWS.png"
      },
      {
       id:"5",
@@ -111,8 +124,8 @@ export class ListCoursesComponent implements OnInit {
       nofHourse:"10 HOURS",
       Level:"Intermediate",
       rating :"10",
-      stars:"5",
-      imgUrl:"../../assets/nodejs5.jpg"
+      stars:"4",
+      imgUrl:"../../assets/UX.jpg"
      }
   ]
   constructor() { }
